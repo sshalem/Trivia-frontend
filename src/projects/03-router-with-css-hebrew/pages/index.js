@@ -1,0 +1,12 @@
+export { default as Admin } from './Admin';
+export { default as HomeLayout } from './HomeLayout';
+export { default as MainPage } from './MainPage';
+export { default as Error } from './Error';
+export { default as English } from './English';
+export { default as Hebrew } from './Hebrew';
+export { default as Tanach } from './Tanach';
+export { default as Math } from './Math';
+export { default as AddQuestion } from './AddQuestion';
+export { default as Question } from './Question';
+export { default as History } from './History';
+export { default as Geography } from './Geography';
