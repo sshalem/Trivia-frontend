@@ -6,19 +6,19 @@ const Admin = () => {
     <>
       <article>
         <div>
-          <NavLink to="/admin/add-question" className="nav-link">
+          <NavLink to="/admin/add-question" className="nav-link-admin">
             הוספת שאלה
           </NavLink>
         </div>
         <br />
         <div>
-          <NavLink to="/admin/question-list" className="nav-link">
+          <NavLink to="/admin/question-list" className="nav-link-admin">
             רשימת שאלות
           </NavLink>
         </div>
         <br />
         <div>
-          <NavLink to="/admin/score-board" className="nav-link">
+          <NavLink to="/admin/score-board" className="nav-link-admin">
             לוח תוצאות
           </NavLink>
         </div>

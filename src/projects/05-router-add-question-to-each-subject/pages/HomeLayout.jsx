@@ -14,9 +14,11 @@ const HomeLayout = () => {
 
   return (
     <>
-      <div className="home-layout-center">
+      {/* Instead of Having Trivia here , 
+    I moved it to the Navabar */}
+      {/* <div className="home-layout-center">
         <span className="logo">טריוויה</span>
-      </div>
+      </div> */}
 
       <Navbar />
       <section className="outlet">{isPageLoading ? <div className="loading" /> : <Outlet context={{ value }} />}</section>

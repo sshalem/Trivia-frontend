@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AddQuestion } from '../pages';
+import { AddQuestionModal } from '../pages';
 import { Modal } from '../components';
 
 const Hebrew = () => {
@@ -21,7 +21,7 @@ const Hebrew = () => {
         </button>
       </div>
       <Modal isOpen={open} onClose={handleClose}>
-        <AddQuestion />
+        <AddQuestionModal />
       </Modal>
     </>
   );

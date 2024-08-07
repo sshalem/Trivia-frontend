@@ -9,7 +9,7 @@ const Modal = ({ isOpen, onClose, children }) => {
     <section className="modal">
       <div className="modal-content">
         <span className="modal-close" onClick={onClose}>
-          &times;
+          סגור &times;
         </span>
         {children}
       </div>

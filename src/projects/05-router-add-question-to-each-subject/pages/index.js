@@ -12,4 +12,5 @@ export { default as Geography } from './Geography';
 export { default as QuestionList } from './QuestionList';
 export { default as ScoreBoard } from './ScoreBoard';
 export { default as AddQuestion } from './AddQuestion';
+export { default as AddQuestionModal } from './AddQuestionModal';
 export { default as UpdateQuestion } from './UpdateQuestion';

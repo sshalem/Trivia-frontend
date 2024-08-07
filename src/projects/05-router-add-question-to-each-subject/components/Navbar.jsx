@@ -5,6 +5,9 @@ const Navbar = () => {
   return (
     <>
       <nav className="nav-center">
+        <div>
+          <span className="logo">טריוויה</span>
+        </div>
         <NavLink to="/" className="nav-link">
           עמוד ראשי
         </NavLink>

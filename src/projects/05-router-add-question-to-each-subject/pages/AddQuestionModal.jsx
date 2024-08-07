@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { RADIO_OPTIONS, SUBJECTS } from '../utils/constants';
 import { QuestionController as questionAxios } from '../utils/axiosInstance';
 
-const AddQuestion = () => {
+const AddQuestionModal = () => {
   /**
    * If no option is selected thus "כללי" is chosen ,But,
    * Since it's not triggred , becaues I don't change it , thus it is empty.
@@ -63,11 +63,11 @@ const AddQuestion = () => {
 
   return (
     <>
-      <div>
+      {/* <div>
         <NavLink to="/admin" className="nav-link-admin">
           חזרה
         </NavLink>
-      </div>
+      </div> */}
       {/* <br /> */}
       <article>
         <form className="form" onSubmit={handleSubmit}>
@@ -148,4 +148,4 @@ const AddQuestion = () => {
   );
 };
 
-export default AddQuestion;
+export default AddQuestionModal;
