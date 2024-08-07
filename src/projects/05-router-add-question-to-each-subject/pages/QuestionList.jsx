@@ -86,13 +86,29 @@ const UpdateButtonComponent = () => {
 
   return (
     <Button style={{ width: '0.75rem', height: '2rem', fontSize: '0.80rem' }} variant="contained" onClick={updateTheCurrentQuestion}>
-      שינוי
+      עדכון
+    </Button>
+  );
+};
+
+const DeleteButtonComponent = () => {
+  const { deleteQuestion } = useAppContext();
+  const navigate = useNavigate();
+  const deleteTheCurrentQuestion = (e) => {
+    deleteQuestion(e);
+    navigate('/admin');
+  };
+
+  return (
+    <Button style={{ width: '0.75rem', height: '2rem', fontSize: '0.80rem' }} variant="contained" color="error" onClick={deleteTheCurrentQuestion}>
+      מחק
     </Button>
   );
 };
 
 const columns = [
   { field: 'update', headerName: '', sortable: false, renderCell: () => <UpdateButtonComponent /> },
+  { field: 'delete', headerName: '', sortable: false, renderCell: () => <DeleteButtonComponent /> },
   { field: 'id', headerName: 'שאלה מס.', width: 130 },
   { field: 'subject', headerName: 'נושא', width: 130 },
   { field: 'question', headerName: 'שאלה', width: 400 },
@@ -120,7 +136,7 @@ const QuestionList = () => {
   return (
     <>
       <div>
-        <NavLink to="/admin" className="nav-link">
+        <NavLink to="/admin" className="nav-link-admin">
           חזרה
         </NavLink>
       </div>

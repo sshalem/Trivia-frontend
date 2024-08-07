@@ -234,10 +234,10 @@ ul {
   /* border: 1px solid green; */
   background-color: var(--white);
   position: absolute;
-  /* top: 3rem; */
+  top: 0.5rem;
   left: 3rem;
   color: var(--primary-500);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 

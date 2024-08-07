@@ -27,11 +27,17 @@ const AppProvider = ({ children }) => {
     setState({ ...state, questionId: questionId });
   };
 
+  const deleteQuestion = (e) => {
+    console.log(e);
+    console.log(e.target.parentElement.parentElement.children[1].innerText);
+  };
+
   return (
     <AppContext.Provider
       value={{
         ...state,
         updateQuestion,
+        deleteQuestion,
       }}>
       {children}
     </AppContext.Provider>
