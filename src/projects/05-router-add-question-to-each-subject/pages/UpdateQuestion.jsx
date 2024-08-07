@@ -68,8 +68,8 @@ const UpdateQuestion = () => {
   const getQuestion = async () => {
     const { data } = await questionAxios.get(`/getQuestionById/${id}`);
     console.log(data);
-    console.log(data.id);
-    console.log(data.subject);
+    // console.log(data.id);
+    // console.log(data.subject);
     setSubject(data.subject);
     questionId.current.value = data.id;
     question.current.value = data.question;

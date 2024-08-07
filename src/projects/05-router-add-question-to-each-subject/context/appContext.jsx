@@ -20,7 +20,7 @@ const AppProvider = ({ children }) => {
   const [state, setState] = useState(initialState);
 
   const updateQuestion = (e) => {
-    console.log(e);
+    // console.log(e);
     // console.log(e.target);
     // console.log(e.target.parentElement);
     // console.log(e.target.parentElement.parentElement);
@@ -28,7 +28,7 @@ const AppProvider = ({ children }) => {
     // console.log(e.target.parentElement.parentElement.children[2].innerText);
 
     const questionId = e.target.parentElement.parentElement.children[2].innerText;
-    console.log(questionId);
+    // console.log(questionId);
 
     localStorage.setItem('questionId', questionId);
     setState({ ...state, questionId: questionId });
