@@ -23,6 +23,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 
 import { useAppContext } from '../context/appContext';
 import { QuestionController as questionAxios } from '../utils/axiosInstance';
+import { headerFilteringStateInitializer } from '@mui/x-data-grid/internals';
 
 /*****************************************
  * TablePaginationActions components
@@ -97,6 +98,7 @@ const DeleteButtonComponent = () => {
   const navigate = useNavigate();
   const deleteTheCurrentQuestion = (e) => {
     deleteQuestion(e);
+    href.admin;
   };
 
   return (
