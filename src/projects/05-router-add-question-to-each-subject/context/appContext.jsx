@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { QuestionController as questionAxios } from '../utils/axiosInstance';
 
 const currentQuestionId = localStorage.getItem('questionId');
 
@@ -20,16 +21,23 @@ const AppProvider = ({ children }) => {
 
   const updateQuestion = (e) => {
     console.log(e);
-    console.log(e.target.parentElement.parentElement.children[1].innerText);
+    // console.log(e.target);
+    // console.log(e.target.parentElement);
+    // console.log(e.target.parentElement.parentElement);
+    // console.log(e.target.parentElement.parentElement.children[2]);
+    // console.log(e.target.parentElement.parentElement.children[2].innerText);
 
-    const questionId = e.target.parentElement.parentElement.children[1].innerText;
+    const questionId = e.target.parentElement.parentElement.children[2].innerText;
+    console.log(questionId);
+
     localStorage.setItem('questionId', questionId);
     setState({ ...state, questionId: questionId });
   };
 
-  const deleteQuestion = (e) => {
-    console.log(e);
-    console.log(e.target.parentElement.parentElement.children[1].innerText);
+  const deleteQuestion = async (e) => {
+    console.log(e.target.parentElement.parentElement.children[2].innerText);
+    const questionId = e.target.parentElement.parentElement.children[2].innerText;
+    const { data } = await questionAxios.delete(`/deleteQuestion/${questionId}`);
   };
 
   return (

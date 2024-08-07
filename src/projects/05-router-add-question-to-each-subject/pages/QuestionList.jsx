@@ -79,6 +79,7 @@ const theme = createTheme({
 const UpdateButtonComponent = () => {
   const { updateQuestion } = useAppContext();
   const navigate = useNavigate();
+
   const updateTheCurrentQuestion = (e) => {
     updateQuestion(e);
     navigate('/admin/update-question');
@@ -96,7 +97,6 @@ const DeleteButtonComponent = () => {
   const navigate = useNavigate();
   const deleteTheCurrentQuestion = (e) => {
     deleteQuestion(e);
-    navigate('/admin');
   };
 
   return (
@@ -112,8 +112,6 @@ const columns = [
   { field: 'id', headerName: 'שאלה מס.', width: 130 },
   { field: 'subject', headerName: 'נושא', width: 130 },
   { field: 'question', headerName: 'שאלה', width: 400 },
-  // { field: 'answers', headerName: 'תשובות', width: 300 },
-  // { field: 'correctAnswer', headerName: 'תשובה נכונה', width: 130 },
 ];
 
 const QuestionList = () => {

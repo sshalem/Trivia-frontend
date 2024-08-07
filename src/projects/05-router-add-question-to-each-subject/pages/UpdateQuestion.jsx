@@ -86,7 +86,7 @@ const UpdateQuestion = () => {
   return (
     <>
       <div>
-        <NavLink to="/admin" className="nav-link">
+        <NavLink to="/admin" className="nav-link-admin">
           חזרה
         </NavLink>
       </div>
